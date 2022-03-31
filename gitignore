@@ -4,9 +4,10 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 
-./KTUproject/Temp
-./KTUproject/Library
-./KTUproject/obj
+KTUproject/Temp
+KTUproject/Library
+KTUproject/obj
+KTUproject/Logs
 
 
 *.bak
