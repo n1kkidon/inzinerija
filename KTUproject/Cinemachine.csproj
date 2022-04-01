@@ -11,10 +11,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3F76EE9B-52FC-F5EF-1D39-D6BCFABC2D61}</ProjectGuid>
+    <ProjectGuid>{07F50ADE-A17F-D310-955C-031574980444}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>UnityEngine.UI.Tests</AssemblyName>
+    <AssemblyName>Cinemachine</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -47,77 +47,84 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\NoActiveCameraInSceneDoesNotCrashEditor.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\RaycastSortingTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\NestedCanvas.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Util\UIBehaviourExtensions.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\SelectableTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\ScrollRect\ScrollRectTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Util\ImageHook.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\InputModuleTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\InputField\GenericInputFieldTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\GraphicRaycasterWorldSpaceCanvasTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\TextEditor\TextEditorTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\RectMask2DWithNestedCanvasCullsUsingCorrectCanvasRect.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\MaskTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CanvasScalerWithChildTextObjectDoesNotCrash.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Util\GraphicTestHelper.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\BridgeScriptForRetainingObjects.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CanvasSizeCorrectInAwakeAndStartScript.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\ScrollBar\ScrollBarClamp.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Layout\VerticalLayoutGroupTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Toggle\ToggleGroupTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\NavigationTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Layout\HorizonalLayoutGroupTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\ImageTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CanvasGroupInheritedAlpha.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\InputModuleTests\PointerClickCallbackCheck.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\LayoutGroup\LayoutGroupArrangement.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\ScrollRect\ScrollRectStableLayout.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\PhysicsRaycasterTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\RawImageTest.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\ScrollRect\ScrollRectClamp.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Button\TestButton.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CreateSceneUtility.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\InputField\InputFieldTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Layout\GridLayoutGroupTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CanvasSizeCorrectInAwakeAndStart.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\InputModuleTests\FakeBaseInput.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Layout\AspectRatioFitterTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\NestedLayout\SceneWithNestedLayoutElementsLoads.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\NestedCanvasMaintainsCorrectSize.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CoroutineWorksIfUIObjectIsAttached.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\ScrollRect\ScrollRectScale.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Slider\SliderTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\GraphicTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Toggle\TestableToggleGroup.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\InputField\DesktopInputFieldTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\ToggleTestImageHook.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Graphic\RawImageTestHook.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\InputModuleTests\DragCallbackCheck.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\NestedLayout\SceneWithNestedLayoutElementsLoadScript.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Image\ImageTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Layout\ContentSizeFitterTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\RectTransformValidAfterEnable.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\InputModuleTests\MouseUpdate.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\EventSystem\GraphicRaycasterTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Toggle\ToggleTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\MaskClipping\RectMask2DClipping.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Layout\LayoutGroupScaling.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\ScrollBar\ScrollBarTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Util\PrivateFieldSetter.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Button\ButtonTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\SiblingOrderChangesLayout.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Util\ConcreteGraphic.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Image\TestableImage.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Canvas\CheckMeshColorsAndColors32Match.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Dropdown\DropdownTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\InputField\TouchInputFieldTests.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\TextEditor\TextEditorBackspaceDelete.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\InputField\FakeInputModule.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Util\ExceptionUtils.cs" />
-     <Compile Include="Packages\com.unity.ugui\Tests\Runtime\Image\ImageFilledGenerateWork.cs" />
-     <None Include="Packages\com.unity.ugui\Tests\Runtime\UnityEngine.UI.Tests.asmdef" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachinePath.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\PostProcessing\CinemachineVolumeSettings.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\ICinemachineCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineDebug.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\UnityVectorExtensions.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineExternalCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineFreeLook.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Helpers\CinemachineTriggerAction.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineCameraOffset.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineCollider.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachinePathBase.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineDollyCart.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineBlenderSettings.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineImpulseManager.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\PostProcessing\CinemachinePostProcessing.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineOrbitalTransposer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\ICinemachineComponent.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineComponentBase.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineBrain.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\LensSettings.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineConfiner.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineSameAsFollowTarget.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Experimental\CinemachineNewVirtualCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineClearShot.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachinePipeline.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineHardLookAt.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Helpers\CinemachineInputProvider.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Timeline\CinemachineTrack.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\Cinemachine3rdPersonFollow.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\SignalSourceAsset.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachinePropertyAttribute.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineImpulseSource.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineMixingCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineImpulseListener.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineExtension.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\AxisState.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineVirtualCameraBase.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\RuntimeUtility.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineSmoothPath.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachinePixelPerfect.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\AssemblyInfo.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineFixedSignal.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineFramingTransposer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\NoiseSettings.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Timeline\CinemachineMixer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineTransposer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\Predictor.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Timeline\CinemachineShot.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\TargetPositionCache.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineIndependentImpulseListener.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineTrackedDolly.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineGroupComposer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Experimental\CinemachineNewFreeLook.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Helpers\CinemachineTouchInputMapper.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineStoryboard.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\Cinemachine3rdPersonAim.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineHardLockToTarget.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Helpers\GroupWeightManipulator.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\SplineHelpers.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineTargetGroup.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineImpulseDefinition.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Impulse\CinemachineCollisionImpulseSource.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\UpdateTracker.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachinePOV.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineRecomposer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineInputAxisDriver.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\GaussianFilter.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Timeline\CinemachineShotPlayable.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Components\CinemachineComposer.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineFollowZoom.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CameraState.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineCore.cs" />
+     <Compile Include="Packages\com.unity.cinemachine\Runtime\Core\CinemachineBlend.cs" />
+     <None Include="Packages\com.unity.cinemachine\Runtime\com.unity.cinemachine.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.28f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -340,8 +347,29 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.28f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="nunit.framework">
- <HintPath>/Users/simas/Desktop/studies/uni/4 semestras/inzinerija/KTUproject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>/Applications/Unity/Hub/Editor/2020.3.28f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>/Applications/Unity/Hub/Editor/2020.3.28f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.OSXStandalone.Extensions">
+ <HintPath>/Applications/Unity/Hub/Editor/2020.3.28f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Plastic.Newtonsoft.Json">
+ <HintPath>/Users/simas/Desktop/studies/uni/4 semestras/inzinerija/KTUproject/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Plastic.Antlr3.Runtime">
+ <HintPath>/Users/simas/Desktop/studies/uni/4 semestras/inzinerija/KTUproject/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="unityplastic">
+ <HintPath>/Users/simas/Desktop/studies/uni/4 semestras/inzinerija/KTUproject/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="log4netPlastic">
+ <HintPath>/Users/simas/Desktop/studies/uni/4 semestras/inzinerija/KTUproject/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/simas/Desktop/studies/uni/4 semestras/inzinerija/KTUproject/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.28f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -690,24 +718,19 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{7B9FA5CA-11CB-87C9-7783-3387A595FE55}</Project>
-      <Name>UnityEngine.UI</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{F01D33BD-B8DE-AAE6-F78D-F6174E308C04}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{5AD9A981-7DA3-1A84-DE00-645FD025574F}</Project>
-      <Name>UnityEditor.TestRunner</Name>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{8DCC6359-F130-B83B-D380-D3B9442D5EA9}</Project>
+      <Name>Unity.Timeline</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{F2072A96-95D7-F099-CC6B-1879A68B2771}</Project>
       <Name>UnityEditor.UI</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{7B9FA5CA-11CB-87C9-7783-3387A595FE55}</Project>
+      <Name>UnityEngine.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
