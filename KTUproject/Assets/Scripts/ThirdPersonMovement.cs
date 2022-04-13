@@ -10,7 +10,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float jumpHeight = 3;
     public float respawn_Height = -5f;
     public float groundDistance = 0.4f;
-    Vector3 respawn_point = new Vector3(1, 4f, 0);
+    public static Vector3 respawn_point = new Vector3(1, 4f, 0);
     Vector3 velocity;
     bool isGrounded;
 
