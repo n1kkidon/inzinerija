@@ -13,6 +13,7 @@ public class ThirdPersonMovement : MonoBehaviour
     Vector3 respawn_point = new Vector3(1, 1.5f, 0);
     Vector3 velocity;
     bool isGrounded;
+    public AudioSource playJumpSound;
 
     public Transform groundCheck;
     public LayerMask groundMask;
@@ -39,6 +40,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            playJumpSound.Play();
         }
         // Respawn
         if (this.transform.position.y < respawn_Height)
