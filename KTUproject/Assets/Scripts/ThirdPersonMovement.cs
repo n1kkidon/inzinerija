@@ -4,13 +4,14 @@ public class ThirdPersonMovement : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
+    public static bool respawn = false;
 
     public float speed = 6;
     public float gravity = -9.81f;
     public float jumpHeight = 3;
     public float respawn_Height = -5f;
     public float groundDistance = 0.4f;
-    Vector3 respawn_point = new Vector3(1, 1.5f, 0);
+    public static Vector3 respawn_point = new Vector3(1, 1.5f, 0);
     Vector3 velocity;
     bool isGrounded;
 
@@ -45,8 +46,11 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             controller.enabled = false;
             transform.position = respawn_point;
+            respawn = true;
             controller.enabled = true;
         }
+        else
+            respawn = false;
         //gravity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
