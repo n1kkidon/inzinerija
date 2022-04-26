@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\attachplayer.cs" />
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
+    <Compile Include="Assets\Scripts\MoveParent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
