@@ -11,21 +11,37 @@ public class NPC : MonoBehaviour
 
     public Vector3 npc_respawn_point = new Vector3();
 
+    private void Start()
+    {
+        NPC_positions.update_Positions();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == Player)
         {
             controller.enabled = false;
             Player.transform.position = ThirdPersonMovement.respawn_point;
-            reset_npc_position();
+            reset_all_npc_position();
             controller.enabled = true;
         }
     }
 
-    public void reset_npc_position()
+    private void reset_all_npc_position()
     {
-        this.transform.position = npc_respawn_point;
-        this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        int i = 0; bool found = true;
+        while (found)
+        {
+            found = false;
+            string name = "NPC_" + ++i;
+            GameObject tempObj = GameObject.Find(name);
+            if (tempObj != null)
+            {
+                found = true;
+                tempObj.transform.position = NPC_positions.get_position(i);
+                tempObj.transform.rotation = NPC_positions.get_rotation(i);
+            }
+        }
     }
 
     private void Update()
@@ -36,11 +52,12 @@ public class NPC : MonoBehaviour
             Vector3 targetDirection = Player.transform.position - transform.position;
             float singleStep = speed * Time.deltaTime;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
             Debug.DrawRay(transform.position, newDirection, Color.red);
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
         if (ThirdPersonMovement.respawn)
-            reset_npc_position();
+        {
+            reset_all_npc_position();
+        }
     }
 }
