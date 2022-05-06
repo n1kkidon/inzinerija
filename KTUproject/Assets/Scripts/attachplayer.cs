@@ -6,7 +6,7 @@ public class attachplayer : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Player;
-
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == Player)
