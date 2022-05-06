@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
@@ -7,9 +9,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public static bool respawn = false;
 
     public float speed = 6;
-    public float gravity = -9.81f;
+    public float gravity = -50f;
     public float jumpHeight = 3;
-    public float respawn_Height = -5f;
+    public float respawn_Height = -10f;
     public float groundDistance = 0.4f;
     public static Vector3 respawn_point = new Vector3(1, 1.5f, 0);
     Vector3 velocity;
@@ -22,13 +24,25 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     public float turnSmoothTime = 0.1f;
 
+    public static bool canBounce = false;
+    public bool canBounce2;
+
+    public Transform groundCheckBounce;
+    public LayerMask groundMaskBounce;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         transform.rotation = Quaternion.Euler(0, 0, 0);
+        canBounce2 = true;
     }
 
     void Update()
+    {
+            movement();
+    }
+
+    void movement()
     {
         //jump
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -53,6 +67,12 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
             respawn = false;
+        // Bounce
+        canBounce = Physics.CheckSphere(groundCheckBounce.position, groundDistance, groundMaskBounce);
+        if (canBounce)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * 2 * -2 * gravity);
+        }
         //gravity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
