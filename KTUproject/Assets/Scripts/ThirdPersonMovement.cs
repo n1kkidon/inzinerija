@@ -17,6 +17,7 @@ public class ThirdPersonMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     public AudioSource playJumpSound;
+    public AudioSource walkSound;
 
     public Transform groundCheck;
     public LayerMask groundMask;
@@ -54,9 +55,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             playJumpSound.Play();
+            isGrounded = false;
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
+
         // Respawn
         if (this.transform.position.y < respawn_Height)
         {
@@ -89,6 +92,26 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+        }
+
+        if (controller.isGrounded && direction.magnitude <= 0)
+        {
+            if ((!walkSound.isPlaying) && (walkSound.time != 0))
+            {
+                walkSound.UnPause();
+            }
+            else
+            {
+                walkSound.Play();
+            }
+        }
+
+        if (!isGrounded)
+        {
+            if (walkSound.isPlaying)
+            {
+                walkSound.Pause();
+            }
         }
     }
 }
