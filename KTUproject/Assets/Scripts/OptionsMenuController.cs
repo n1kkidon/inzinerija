@@ -9,12 +9,16 @@ using Cinemachine;
 
 public class OptionsMenuController : MonoBehaviour
 {
+    public CharacterController controller;
     public bool initialized = false;
+    public bool CheatsOn = false;
     public Slider mouseSensitivitySlider;
     public CinemachineFreeLook cam;
+    public Toggle CheatToggle;
 
     void Start()
     {
+        CheatsOn = false;
         if (PlayerPrefs.HasKey("Sensitivity") && PlayerPrefs.HasKey("SensitivityY"))
         {
             mouseSensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity");
@@ -37,5 +41,21 @@ public class OptionsMenuController : MonoBehaviour
         Debug.Log("Set sensitivity to " + val);
         cam.m_XAxis.m_MaxSpeed = val;
         cam.m_YAxis.m_MaxSpeed = (val / 100);
+    }
+
+    public void ChangeCheatState()
+    {
+        if (!initialized) return;
+        if (!Application.isPlaying) return;
+        if (CheatToggle.isOn)
+        {
+            CheatsOn = true;
+            Debug.Log("Turned on rage mode ");
+        }
+        else
+        {
+            CheatsOn = false;
+            Debug.Log("Turned off rage mode ");
+        }
     }
 }
