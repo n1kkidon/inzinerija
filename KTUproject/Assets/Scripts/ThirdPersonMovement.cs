@@ -9,6 +9,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public Transform cam;
     public Toggle CheatToggle;
     public static bool respawn = false;
+    public static bool walking = false;
 
     public float speed = 6;
     public float gravity = -50f;
@@ -92,6 +93,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            walking = true;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -99,6 +101,12 @@ public class ThirdPersonMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
+        else
+        {
+            walking = false;
+        }
+        if (!isGrounded)
+            walking = false;
     }
 
 
