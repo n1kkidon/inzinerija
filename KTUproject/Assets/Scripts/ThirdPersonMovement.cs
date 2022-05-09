@@ -20,6 +20,7 @@ public class ThirdPersonMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     public AudioSource playJumpSound;
+    public AudioSource walkSound;
 
     public Transform groundCheck;
     public LayerMask groundMask;
@@ -107,6 +108,25 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         if (!isGrounded)
             walking = false;
+        
+        if (isGrounded && direction.magnitude <= 0)
+        { 
+            if ((!walkSound.isPlaying) && (walkSound.time != 0))
+            { 
+                walkSound.UnPause(); 
+            } else
+            {
+                walkSound.Play();
+            }
+        }
+        
+        if (!isGrounded) 
+        { 
+            if (walkSound.isPlaying) 
+            { 
+                walkSound.Pause();
+            }
+        }
     }
 
 
