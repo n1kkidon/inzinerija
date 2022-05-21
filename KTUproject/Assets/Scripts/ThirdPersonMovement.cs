@@ -45,7 +45,8 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         if (CheatToggle.isOn)
         {
-            movementCheat();
+            walkSound.Pause();
+            movementCheat();     
         }
         else 
         {

@@ -15,6 +15,7 @@ public class OptionsMenuController : MonoBehaviour
     public Slider mouseSensitivitySlider;
     public CinemachineFreeLook cam;
     public Toggle CheatToggle;
+    public Toggle InvincibleToggle;
 
     void Start()
     {
@@ -47,15 +48,10 @@ public class OptionsMenuController : MonoBehaviour
     {
         if (!initialized) return;
         if (!Application.isPlaying) return;
-        if (CheatToggle.isOn)
+        if (CheatToggle.isOn && InvincibleToggle.isOn)
         {
             CheatsOn = true;
-            Debug.Log("Turned on rage mode ");
-        }
-        else
-        {
-            CheatsOn = false;
-            Debug.Log("Turned off rage mode ");
+            Debug.Log("Turned on rage mode lmao");
         }
     }
 }

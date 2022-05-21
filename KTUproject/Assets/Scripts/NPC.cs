@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class NPC : MonoBehaviour
     public CharacterController controller;
     public float speed = 5f;
     float reactDistance = 10f;
+    public Toggle InvincibleToggle;
 
     public Vector3 npc_respawn_point = new Vector3();
 
@@ -18,12 +20,15 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == Player)
+        if (!InvincibleToggle.isOn)
         {
-            controller.enabled = false;
-            Player.transform.position = ThirdPersonMovement.respawn_point;
-            reset_all_npc_position();
-            controller.enabled = true;
+            if (other.gameObject == Player)
+            {
+                controller.enabled = false;
+                Player.transform.position = ThirdPersonMovement.respawn_point;
+                reset_all_npc_position();
+                controller.enabled = true;
+            }
         }
     }
 
