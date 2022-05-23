@@ -21,6 +21,7 @@ public class ThirdPersonMovement : MonoBehaviour
     bool isGrounded;
     public AudioSource playJumpSound;
     public AudioSource walkSound;
+    public AudioSource fallSound;
 
     public Transform groundCheck;
     public LayerMask groundMask;
@@ -68,6 +69,10 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             playJumpSound.Play();
+        }
+        if (velocity.y < -26)
+        {
+            fallSound.Play();
         }
         // Respawn
         if (this.transform.position.y < respawn_Height)
